@@ -1,0 +1,146 @@
+{
+  "arrival": [
+    {"speaker":"旁白","presentation":"narration","text":"意识恢复时，第一个回来的是金属冷却的声音。"},
+    {"speaker":"旁白","presentation":"narration","text":"PLAYER 的左肩被安全带勒得失去知觉。面罩内侧满是呼吸凝成的雾。"},
+    {"speaker":"系统","presentation":"alert","text":"应急电力在线。舱内氧含量百分之十七点六。右侧舱段已自动隔离。"},
+    {"speaker":"PLAYER","text":"希娜……回答我。"},
+    {"speaker":"旁白","presentation":"narration","text":"只有风撞在外壳上。右侧过道被扭曲的梁架压住，一只戴着手套的手露在红光中。"},
+    {"speaker":"PLAYER","text":"我看到你了。别动。"},
+    {"speaker":"旁白","presentation":"narration","text":"液压剪只完成了两次动作就失去压力。PLAYER 用肩膀顶开最后一段金属，把希娜从座椅和碎片之间拖出来。"},
+    {"speaker":"系统","presentation":"alert","text":"检测到乘员大量失血。医疗舱辅助电源剩余二十六分钟。"},
+    {"speaker":"PLAYER","text":"二十六分钟够了。先让它接管止血。"},
+    {"speaker":"旁白","presentation":"narration","text":"医疗舱合拢时，希娜的头盔还挂在 PLAYER 手腕上。贴纸角落的日文在应急灯下只剩一句：绝对不要死。"},
+    {"speaker":"系统","presentation":"system","text":"医疗舱已启动。请就地确认伤员状态，并重建主生命保障回路。"}
+  ],
+  "medical_first": [
+    {"speaker":"系统","presentation":"system","text":"医疗舱 M-02。伤员身份：米多莉·希娜。"},
+    {"speaker":"系统","presentation":"alert","text":"腹部穿透伤，左侧肋骨骨折，失血性休克。自动缝合程序已完成百分之八十一。"},
+    {"speaker":"PLAYER","text":"剩下的百分之十九呢？"},
+    {"speaker":"系统","presentation":"system","text":"主循环供电不足。为保留基础生命支持，深层修复已暂停。"},
+    {"speaker":"旁白","presentation":"narration","text":"透明舱盖下，希娜的脸色比医用灯更白。她的手指却依然扣着安全带，像还在等下一道操作指令。"},
+    {"speaker":"PLAYER","text":"瞳孔反应正常。血氧在回升。"},
+    {"speaker":"系统","presentation":"system","text":"建议将伤员转入长期稳定模式。当前电力余量不足。"},
+    {"speaker":"PLAYER","text":"生命保障主回路在隔壁。只要旁路阀没有和右舱一起断掉。"},
+    {"speaker":"旁白","presentation":"narration","text":"医疗舱发出一声很轻的提示音。那不是好消息，也不是坏消息，只是证明它还在工作。"},
+    {"id":"medical_choice","speaker":"PLAYER","text":"希娜听不见他。但在离开前，PLAYER 还是把手放在了舱盖上。","choices":[
+      {"text":"“别急，我会把这艘船重新拼起来。”","set_flags":{"medical_tone":"promise"},"next":"medical_promise"},
+      {"text":"“二号成员状态稳定。现在由我接管任务。”","set_flags":{"medical_tone":"report"},"next":"medical_report"}
+    ]},
+    {"id":"medical_promise","speaker":"PLAYER","text":"别急。我会把这艘船重新拼起来，然后等你醒来挑错。","next":"medical_join"},
+    {"id":"medical_report","speaker":"PLAYER","text":"二号成员状态稳定。现在由我接管任务。你醒来以后可以重新接手地质组。","next":"medical_join"},
+    {"id":"medical_join","speaker":"系统","presentation":"system","text":"医疗舱优先级已锁定。请恢复生命保障主回路。"},
+    {"speaker":"PLAYER","text":"明白。这一次我听系统的。"}
+  ],
+  "medical_repeat": [
+    {"speaker":"系统","presentation":"system","text":"米多莉·希娜：生命体征暂时稳定。医疗舱仍等待主回路供电。"},
+    {"speaker":"PLAYER","text":"我还在。飞船也还在。先把这两句当好消息。"},
+    {"speaker":"旁白","presentation":"narration","text":"舱盖下凝结了一小片雾，随着希娜的呼吸极轻地收缩。"}
+  ],
+  "life_locked": [
+    {"speaker":"系统","presentation":"alert","text":"维修锁定。医疗舱旁路状态未确认。"},
+    {"speaker":"PLAYER","text":"如果直接合闸，电涌可能穿过医疗舱。"},
+    {"speaker":"PLAYER","text":"先检查希娜的独立供电，然后再动这里。"}
+  ],
+  "life_first": [
+    {"speaker":"系统","presentation":"system","text":"生命保障主回路 LSS-1。氧循环效率百分之二十二。"},
+    {"speaker":"PLAYER","text":"二氧化碳洗涤器没坏。坏的是让它工作的那部分。"},
+    {"speaker":"系统","presentation":"alert","text":"检测到主风机过载。右舷压力传感器持续请求补气。"},
+    {"speaker":"PLAYER","text":"右舷已经不存在了。它在对着火星大气加压。"},
+    {"speaker":"旁白","presentation":"narration","text":"PLAYER 拆下维修盖。灰黑色氧化尘从接口里落下来，沾在手套上，像某种干涸的血。"},
+    {"speaker":"PLAYER","text":"隔离右舷压力节点。把主风机转到本地控制。"},
+    {"speaker":"系统","presentation":"system","text":"需要手动重建路由。建议使用黄色跨接线连接 B-4 与 C-1。"},
+    {"speaker":"PLAYER","text":"黄线在冲击里融了。用医疗舱备用止血带固定蓝线，功能一样。"},
+    {"speaker":"系统","presentation":"alert","text":"警告：该操作不符合 F-47 维修规程。"},
+    {"speaker":"PLAYER","text":"那就在任务报告里投诉我。"},
+    {"speaker":"旁白","presentation":"narration","text":"旁路阀转过第一圈时，舱壁深处传来一声沉重的振动。"},
+    {"speaker":"系统","presentation":"system","text":"主风机转速上升。氧循环效率百分之三十八。"},
+    {"speaker":"PLAYER","text":"继续。别在现在停。"},
+    {"speaker":"系统","presentation":"system","text":"主循环稳定。医疗舱供电已提升至安全阈值。"},
+    {"speaker":"旁白","presentation":"narration","text":"稳定的空气流声重新填满舱内。在整个火星上，这可能是最接近雨声的东西。"},
+    {"speaker":"PLAYER","text":"一个问题解决。还剩下大概一整颗火星。"}
+  ],
+  "life_repeat": [
+    {"speaker":"系统","presentation":"system","text":"生命保障主回路稳定。右舷损坏节点已隔离。"},
+    {"speaker":"PLAYER","text":"氧气很贵。今天先不分给舱外那一半飞船。"}
+  ],
+  "console_locked": [
+    {"speaker":"系统","presentation":"alert","text":"驾驶舱数据核心处于低功耗模式。"},
+    {"speaker":"PLAYER","text":"现在唤醒它只会与医疗舱抢电。"},
+    {"speaker":"PLAYER","text":"先让生命保障稳定，然后再读黑匣。"}
+  ],
+  "console_first": [
+    {"speaker":"系统","presentation":"system","text":"驾驶舱本地记录器启动。共发现十七项高优先级故障。"},
+    {"speaker":"PLAYER","text":"只显示还能修的。"},
+    {"speaker":"系统","presentation":"system","text":"可修复项目：高增益通讯、外部气闸、货舱信标、近距离导航。"},
+    {"speaker":"PLAYER","text":"前哨站呢？"},
+    {"speaker":"系统","presentation":"system","text":"正在搜索埃利西姆前哨站自动信标。"},
+    {"speaker":"旁白","presentation":"narration","text":"信号频谱上先出现了一层持续的低频干扰。它与迫降前扫描到的谐波一样整齐。"},
+    {"speaker":"PLAYER","text":"把这段标记为事故关联数据。等希娜醒来让她看。"},
+    {"speaker":"系统","presentation":"system","text":"已标记。搜索继续。"},
+    {"speaker":"系统","presentation":"system","text":"检测到前哨站自动信标。方位二七八点四度，直线距离一点八公里。"},
+    {"speaker":"PLAYER","text":"它还在。"},
+    {"speaker":"系统","presentation":"system","text":"信标状态：低功耗待机。气压不明。电力百分之八十七。"},
+    {"speaker":"PLAYER","text":"比我们富裕。现在缺的是过去的路。"},
+    {"speaker":"系统","presentation":"system","text":"外部货舱信标两个。一号距离九十八米，二号距离一百七十二米。"},
+    {"speaker":"PLAYER","text":"先拿回近的那个。里面有移动电源和水循环配件。"},
+    {"speaker":"旁白","presentation":"narration","text":"驾驶舱外，沙尘正沿着破裂的舷壳向东移动。无人前哨站的信标在地图上一闪一闪，像一颗很远的星。"}
+  ],
+  "console_repeat": [
+    {"speaker":"系统","presentation":"system","text":"埃利西姆前哨站信标在线。距离一点八公里。"},
+    {"speaker":"PLAYER","text":"现在没有路。但至少我们知道该往哪边走。"}
+  ],
+  "greenhouse_locked": [
+    {"speaker":"系统","presentation":"system","text":"货舱管理器未获得任务路径。"},
+    {"speaker":"PLAYER","text":"先从黑匣找到前哨站和散落货舱。然后再决定带什么出去。"}
+  ],
+  "greenhouse_first": [
+    {"speaker":"系统","presentation":"system","text":"货舱 C-03。内容：温室培养床、营养液、作物种子、生活物资。"},
+    {"speaker":"PLAYER","text":"外壳没裂。运输锁也还在。"},
+    {"speaker":"旁白","presentation":"narration","text":"货架上的标签被撞歪了。“地质样本配额”下面，塞着日本青梗菜、四季豆和一小袋樱花种子。"},
+    {"speaker":"PLAYER","text":"果然。她把种子算成了地质样本。"},
+    {"speaker":"系统","presentation":"system","text":"该货物分类由二号成员于发射前九十六小时修改。"},
+    {"speaker":"PLAYER","text":"这叫证据确凿。"},
+    {"speaker":"旁白","presentation":"narration","text":"另一个箱子里放着鲣鱼粉、白砂糖和两罐梅子酒。玻璃罐被泡沫包得很严密，比部分科学仪器更安全。"},
+    {"speaker":"PLAYER","text":"好吧。这一部分保障确实很完整。"},
+    {"speaker":"系统","presentation":"system","text":"建议 EVA 携带：维修工具、空氧瓶、导航信标、两人份应急口粮。"},
+    {"speaker":"PLAYER","text":"两人份。这个数字先不改。"},
+    {"speaker":"旁白","presentation":"narration","text":"PLAYER 把一支草莓味营养剂放到医疗舱旁，又把另一支塞进自己的外勤包。"},
+    {"speaker":"PLAYER","text":"外面零下六十七度。不能带酒，但可以带一点运气。"},
+    {"speaker":"系统","presentation":"system","text":"EVA 基础装备清单已生成。请检查右舷气闸。"}
+  ],
+  "greenhouse_repeat": [
+    {"speaker":"旁白","presentation":"narration","text":"温室模块仍锁在运输架上。几百粒种子沉默地等待水、光和时间。"},
+    {"speaker":"PLAYER","text":"等我们到前哨站，你们再开始长。这里不是家。"}
+  ],
+  "airlock_locked": [
+    {"speaker":"系统","presentation":"alert","text":"右舷气闸暂未解锁。EVA 任务路径不完整。"},
+    {"speaker":"PLAYER","text":"出去之前要先确认前哨站方位和要回收的物资。"},
+    {"speaker":"PLAYER","text":"在火星上走错一百米，就可能没有第二次尝试。"}
+  ],
+  "airlock_first": [
+    {"speaker":"系统","presentation":"system","text":"右舷气闸本地检查。内门密封完整。外门执行器响应延迟零点八秒。"},
+    {"speaker":"PLAYER","text":"在接受范围。下一项。"},
+    {"speaker":"系统","presentation":"system","text":"外部气压六百二十一帕。温度零下六十七度。平均风速十八点七米每秒。"},
+    {"speaker":"PLAYER","text":"沙尘呢？"},
+    {"speaker":"系统","presentation":"system","text":"局部能见度四十八米，预计三十七分钟后下降至二十二米。"},
+    {"speaker":"PLAYER","text":"窗口不大。但足够走到一号货舱。"},
+    {"speaker":"旁白","presentation":"narration","text":"气闸观察窗外，飞船拖出的沟壑一直伸向红色雾尘。一枚货舱信标在沙里有节律地闪烁。"},
+    {"speaker":"系统","presentation":"system","text":"EVA 服一号：外壳完整。主氧瓶百分之七十二。电池百分之八十一。"},
+    {"speaker":"PLAYER","text":"安全绳、补漏剂、液压钳、可见光信标。"},
+    {"speaker":"系统","presentation":"alert","text":"提醒：当前可执行 EVA 的乘员数量为一。"},
+    {"speaker":"PLAYER","text":"我知道。"},
+    {"speaker":"系统","presentation":"alert","text":"单人 EVA 风险等级：高。建议等待第二名乘员恢复。"},
+    {"speaker":"PLAYER","text":"医疗舱的电源等不了。我只去一号货舱，沿安全绳原路返回。"},
+    {"speaker":"系统","presentation":"system","text":"路线已记录。超出一百二十米时将发出返航警告。"},
+    {"speaker":"旁白","presentation":"narration","text":"PLAYER 把头盔拿起来。那枚猫脸贴纸仍在希娜的头盔上，他的头盔什么都没有。"},
+    {"speaker":"PLAYER","text":"借一点你的运气。不拿走，就放在我看得见的地方。"},
+    {"speaker":"系统","presentation":"system","text":"气闸解锁。EVA 前检查完成。"},
+    {"speaker":"旁白","presentation":"narration","text":"外门边缘透进一线暗红色的光。门后是第一次舱外行动，也是一条通往前哨站的路。"},
+    {"speaker":"PLAYER","text":"好。从现在开始，每一步都算在返程里。"},
+    {"speaker":"系统","presentation":"system","text":"检查点已写入。当前任务：准备进入火星地表。"}
+  ],
+  "airlock_repeat": [
+    {"speaker":"系统","presentation":"system","text":"气闸已解锁。EVA 服一号处于待机状态。"},
+    {"speaker":"PLAYER","text":"沙尘窗口还在。下一步，出发。"}
+  ]
+}

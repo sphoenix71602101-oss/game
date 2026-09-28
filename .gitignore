@@ -1,0 +1,9 @@
+_quarantine_backup/
+.test_profile/
+legacy/release/
+mars_remake/.godot/
+mars_remake/build/
+mars_remake/exports/
+*.tmp
+*.log
+
